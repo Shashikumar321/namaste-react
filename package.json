@@ -1,0 +1,32 @@
+{
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "description": "namaste react web app ",
+  "scripts": { 
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shashikumar321/namaste-react.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Shasikumar321",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shashikumar321/namaste-react/issues"
+  },
+  "homepage": "https://github.com/Shashikumar321/namaste-react#readme",
+  "devDependencies": {
+    "parcel": "^2.13.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "browserslist": [
+    "last 10 version"
+  ]
+}
