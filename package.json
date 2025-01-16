@@ -2,7 +2,7 @@
   "name": "namaste-react",
   "version": "1.0.0",
   "description": "namaste react web app ",
-  "scripts": { 
+  "scripts": {
     "test": "jest",
     "start": "parcel index.html",
     "build": "parcel build index.html"
@@ -26,9 +26,13 @@
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^7.1.1"
   },
   "browserslist": [
     "last 10 version"
-  ]
+  ],
+  "@parcel/resolver-default": {
+    "packageExports": true
+  }
 }

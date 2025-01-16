@@ -31,10 +31,21 @@
 
 .res-card, .shimmer-cards {
   width: 200px;
+  height : 380px;
   padding: 5px;
   margin: 10px;
   border-radius: 6px;
   background-color: #f0f0f0;
+}
+
+.body-links {
+  color: #000000;
+  text-decoration: none;
+}
+
+.links {
+  text-decoration: none;
+
 }
 
 .res-card:hover {
