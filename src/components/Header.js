@@ -11,31 +11,31 @@ const Header = () => {
   useEffect(() => {}, []);
 
   return (
-    <div className="header">
+    <div className="flex justify-between bg-orange-100 shadow-md">
       <div className="logo-container">
-        <img className="logo" src={LOGO_URL} />
+        <img className="w-28" src={LOGO_URL} />
       </div>
       <div className="nav-items">
-        <ul>
-          <li className={onlineStatus ? "online-status" : "offline-status" } ></li>
-          <li>
-            <Link className="links" to="/">Home</Link>
+        <ul className="flex m-10">
+          <li className="w-4 h-4 pr-8"> {onlineStatus ? '🟢'  : '🔴' }</li>
+          <li className="pr-4">
+            <Link className="" to="/">Home</Link>
           </li>
-          <li>
+          <li className="pr-4">
             <Link className="links" to="/about">About Us</Link>
           </li>
-          <li>
+          <li className="pr-4">
             <Link className="links" to="/contact">Contact Us</Link>
           </li>
-          <li>
+          <li className="pr-4">
             <Link className="links" to="/grocery">Grocery</Link>
           </li>
-          <li>
+          <li className="pr-4">
             <Link className="links" to="/Cart">Cart</Link>
           </li>
-          <li>
+          <li className="pr-4">
             <button
-              className="login-btn"
+              className="px-5 py-1 bg-green-500 rounded-lg"
               onClick={() => setLoginButton(!loginButton)}
             >
               {loginButton ? "Login" : "Logout"}

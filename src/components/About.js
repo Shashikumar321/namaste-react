@@ -30,12 +30,11 @@ import React from "react";
 
 const About = () => {
   return (
-    <div>
-      <h1>About</h1>
+    <div className="m-6 p-2 w-[300px] h-[500px] shadow-lg bg-gray-100 rounded-lg">
       <h2>This is my food ordering Web App</h2>
 
       <div className="about-us-cards">
-        <User />
+        {/* <User /> */}
         <UserClass />
       </div>
     </div>

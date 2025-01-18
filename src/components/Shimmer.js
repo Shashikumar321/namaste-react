@@ -1,26 +1,26 @@
 const Shimmer = () => {
     return (
-        <div className="shimmer-container">
-            <div className="shimmer-cards"></div>
-            <div className="shimmer-cards"></div>
-            <div className="shimmer-cards"></div>
-            <div className="shimmer-cards"></div>
-            <div className="shimmer-cards"></div>
-            <div className="shimmer-cards"></div>
-            <div className="shimmer-cards"></div>
-            <div className="shimmer-cards"></div>
-            <div className="shimmer-cards"></div>
-            <div className="shimmer-cards"></div>
-            <div className="shimmer-cards"></div>
-            <div className="shimmer-cards"></div>
-            <div className="shimmer-cards"></div>
-            <div className="shimmer-cards"></div>
-            <div className="shimmer-cards"></div>
-            <div className="shimmer-cards"></div>
-            <div className="shimmer-cards"></div>
-            <div className="shimmer-cards"></div>
-            <div className="shimmer-cards"></div>
-            <div className="shimmer-cards"></div>
+        <div className="flex flex-wrap rounded-md">
+            <div className="m-2 p-4 w-[280px] h-[400px] bg-gray-100 hover:bg-gray-200 rounded-md"></div>
+            <div className="m-2 p-4 w-[280px] h-[400px] bg-gray-100 hover:bg-gray-200 rounded-md"></div>
+            <div className="m-2 p-4 w-[280px] h-[400px] bg-gray-100 hover:bg-gray-200 rounded-md"></div>
+            <div className="m-2 p-4 w-[280px] h-[400px] bg-gray-100 hover:bg-gray-200 rounded-md"></div>
+            <div className="m-2 p-4 w-[280px] h-[400px] bg-gray-100 hover:bg-gray-200 rounded-md"></div>
+            <div className="m-2 p-4 w-[280px] h-[400px] bg-gray-100 hover:bg-gray-200 rounded-md"></div>
+            <div className="m-2 p-4 w-[280px] h-[400px] bg-gray-100 hover:bg-gray-200 rounded-md"></div>
+            <div className="m-2 p-4 w-[280px] h-[400px] bg-gray-100 hover:bg-gray-200 rounded-md"></div>
+            <div className="m-2 p-4 w-[280px] h-[400px] bg-gray-100 hover:bg-gray-200 rounded-md"></div>
+            <div className="m-2 p-4 w-[280px] h-[400px] bg-gray-100 hover:bg-gray-200 rounded-md"></div>
+            <div className="m-2 p-4 w-[280px] h-[400px] bg-gray-100 hover:bg-gray-200 rounded-md"></div>
+            <div className="m-2 p-4 w-[280px] h-[400px] bg-gray-100 hover:bg-gray-200 rounded-md"></div>
+            <div className="m-2 p-4 w-[280px] h-[400px] bg-gray-100 hover:bg-gray-200 rounded-md"></div>
+            <div className="m-2 p-4 w-[280px] h-[400px] bg-gray-100 hover:bg-gray-200 rounded-md"></div>
+            <div className="m-2 p-4 w-[280px] h-[400px] bg-gray-100 hover:bg-gray-200 rounded-md"></div>
+            <div className="m-2 p-4 w-[280px] h-[400px] bg-gray-100 hover:bg-gray-200 rounded-md"></div>
+            <div className="m-2 p-4 w-[280px] h-[400px] bg-gray-100 hover:bg-gray-200 rounded-md"></div>
+            <div className="m-2 p-4 w-[280px] h-[400px] bg-gray-100 hover:bg-gray-200 rounded-md"></div>
+            <div className="m-2 p-4 w-[280px] h-[400px] bg-gray-100 hover:bg-gray-200 rounded-md"></div>
+            <div className="m-2 p-4 w-[280px] h-[400px] bg-gray-100 hover:bg-gray-200 rounded-md"></div>
         </div>
     )
 }
