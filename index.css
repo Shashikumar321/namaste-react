@@ -103,3 +103,19 @@
   height: 60%;
   border-radius: 4px;
 }
+
+.online-status {
+  margin-top: 25px !important;
+  width: 1px;
+  height: 1px;
+  background-color: green;
+  border-radius: 50%;
+}
+
+.offline-status {
+  margin-top: 25px !important;
+  width: 1px;
+  height: 1px;
+  background-color: red;
+  border-radius: 50%;
+}
