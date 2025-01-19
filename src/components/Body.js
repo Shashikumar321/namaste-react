@@ -1,9 +1,10 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, { WithPromotedLabel } from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import { FETCH_RESTAURANTS_URL } from "../utils/constants";
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom"
+import { useState, useEffect, useContext } from "react";
+import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 const Body = () => {
   const [resListData, setResList] = useState([]);
@@ -12,6 +13,12 @@ const Body = () => {
   const [searchText, setSearchText] = useState("");
 
   const onlineStatus = useOnlineStatus();
+
+  const { loggedInUser, setUserName } = useContext(UserContext);
+
+  const [loggedInUserText, setLoggedInUserText] = useState("");
+
+  const RestaurantCardPromoted = WithPromotedLabel(RestaurantCard);
 
   useEffect(() => {
     fetchData();
@@ -30,25 +37,29 @@ const Body = () => {
   };
 
   if (onlineStatus === false) {
-    return <h1>Looks like you are offline !!  Please check your internet connection. </h1>
+    return (
+      <h1>
+        Looks like you are offline !! Please check your internet connection.{" "}
+      </h1>
+    );
   }
 
   return resListData.length === 0 ? (
     <Shimmer />
   ) : (
-    <div className="px-4">
-      <div className="filter flex m-2">
+    <div className="">
+      <div className="filter flex justify-between m-2">
         <div className="search">
           <input
             type="text"
-            className="p-[2px] border border-solid border-black rounded-md"
+            className="p-[2px] shadow-lg border border-solid border-black rounded-md"
             value={searchText}
             onChange={(e) => {
               setSearchText(e.target.value);
             }}
           ></input>
           <button
-            className="px-5 py-1 m-4 bg-green-300 rounded-lg"
+            className="px-5 py-1 m-4 bg-green-200 rounded-lg"
             onClick={() => {
               const searchedData = resListData.filter((res) =>
                 res.info.name.toLowerCase().includes(searchText.toLowerCase())
@@ -60,7 +71,7 @@ const Body = () => {
           </button>
         </div>
         <button
-          className="px-5 py-1 m-4 bg-green-300 rounded-lg"
+          className="px-5 py-1 m-4 bg-green-200 rounded-lg"
           onClick={() => {
             const filteredResList = resListData.filter(
               (res) => res.info.avgRating > 4.3
@@ -70,11 +81,38 @@ const Body = () => {
         >
           Top Rated Restaurants
         </button>
+        <div>
+          <label className="p-2">UserName: </label>
+          <input
+            className="p-[2px] shadow-lg border border-solid border-black rounded-md"
+            type="text"
+            value={loggedInUserText}
+            onChange={(e) => setLoggedInUserText(e.target.value)}
+          ></input>
+
+          <button
+            className="px-5 py-1 m-4 bg-green-200 rounded-lg"
+            onClick={() => {
+              setUserName(loggedInUserText);
+            }}
+          >
+            Update
+          </button>
+        </div>
       </div>
       <div className="flex flex-wrap rounded-md">
         {filteredRestaurant.map((res) => (
-          <Link className="body-links" to={'/restaurant/'+res.info.id} key={res.info.id}>
-          <RestaurantCard resData={res} /></Link>
+          <Link
+            className="body-links"
+            to={"/restaurant/" + res.info.id}
+            key={res.info.id}
+          >
+            {res.info.avgRating > 4.4 ? (
+              <RestaurantCardPromoted resData={res} />
+            ) : (
+              <RestaurantCard resData={res} />
+            )}
+          </Link>
         ))}
       </div>
     </div>

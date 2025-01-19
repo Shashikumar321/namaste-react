@@ -9,3 +9,6 @@ export const FETCH_RESTAURANTS_URL =
 
 export const FETCH_RES_MENU =
   "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.778963&lng=77.7702029&restaurantId=";
+
+export const FETCH_ITEM_IMAGE =
+  "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/";
