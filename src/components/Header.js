@@ -3,6 +3,7 @@ import { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
+import { useSelector } from "react-redux";
 
 const Header = () => {
   const [loginButton, setLoginButton] = useState(true);
@@ -11,10 +12,12 @@ const Header = () => {
 
   const data = useContext(UserContext);
 
+  const cartItems = useSelector((store) => store.cart.items);
+
   useEffect(() => {}, []);
 
   return (
-    <div className="-mx-52 h-16 flex justify-between bg-gray-50 shadow-md">
+    <div className="-mx-52 h-16 flex justify-between bg-gray-50 shadow-md ">
       <div className="logo-container">
         <img className="w-16 ml-60" src={LOGO_URL} />
       </div>
@@ -34,7 +37,7 @@ const Header = () => {
             <Link className="links" to="/grocery">Grocery</Link>
           </li>
           <li className="pr-4">
-            <Link className="links" to="/Cart">Cart</Link>
+            <Link className="links" to="/cart">Cart ({cartItems.length})</Link>
           </li>
           <li className="pr-4 -top-2">
             <button
